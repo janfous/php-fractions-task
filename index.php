@@ -11,7 +11,7 @@ $mixed = new MixedFraction(1, 2, 1);
 
 echo "<h4>add</h4>";
 
-echo "1 + 2 = " . Operation::add(1,2);
+echo "1 + 2 = " . Operation::add(1,2)->toString();
 echo "<br />";
 
 $b = new Fraction(1,2);
@@ -29,7 +29,7 @@ echo "{$a->toString()} + {$b->toString()} = " . Operation::add($a, $b)->toString
 
 echo "<h4>multiply</h4>";
 
-echo "2 * 2 = " . Operation::multiply(2,2);
+echo "2 * 2 = " . Operation::multiply(2,2)->toString();
 echo "<br />";
 
 $b = new Fraction(6,2);
@@ -47,7 +47,7 @@ echo "{$a->toString()} * {$b->toString()} = " . Operation::multiply($a, $b)->toS
 
 echo "<h4>subtract</h4>";
 
-echo "2 - 2 = " . Operation::subtract(2,2);
+echo "2 - 2 = " . Operation::subtract(2,2)->toString();
 echo "<br />";
 
 $b = new Fraction(6,1);
@@ -70,7 +70,7 @@ echo "<br />";
 
 echo "<h4>divide</h4>";
 
-echo "2 / 2 = " . Operation::divide(2,2);
+echo "15 / 10 = " . Operation::divide(15,10)->toString();
 echo "<br />";
 
 $b = new Fraction(15,8);

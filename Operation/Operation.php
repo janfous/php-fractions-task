@@ -17,12 +17,12 @@ final class Operation {
     /**
      * @param int|Fraction|MixedFraction $a
      * @param int|Fraction|MixedFraction $b
-     * @return int|Fraction
+     * @return Fraction
      * @throws Exception
      */
-    public static function add(mixed $a, mixed $b): Fraction|int {
+    public static function add(mixed $a, mixed $b): Fraction {
         if (is_int($a) && is_int($b)) {
-            return $a + $b;
+            return new Fraction($a + $b);
         } elseif (is_object($a) && is_int($b)) {
             return $a->addInt($b);
         } elseif (is_int($a) && is_object($b)) {
@@ -35,12 +35,12 @@ final class Operation {
     /**
      * @param int|Fraction|MixedFraction $a
      * @param int|Fraction|MixedFraction $b
-     * @return int|Fraction
+     * @return Fraction
      * @throws Exception
      */
-    public static function subtract(mixed $a, mixed $b): Fraction|int {
+    public static function subtract(mixed $a, mixed $b): Fraction {
         if (is_int($a) && is_int($b)) {
-            return $a - $b;
+            return new Fraction($a - $b);
         } elseif (is_object($a) && is_int($b)) {
             return $a->subInt($b);
         } elseif (is_int($a) && is_object($b)) {
@@ -53,12 +53,12 @@ final class Operation {
     /**
      * @param int|Fraction|MixedFraction $a
      * @param int|Fraction|MixedFraction $b
-     * @return int|Fraction
+     * @return Fraction
      * @throws Exception
      */
-    public static function multiply(mixed $a, mixed $b): Fraction|int {
+    public static function multiply(mixed $a, mixed $b): Fraction {
         if (is_int($a) && is_int($b)) {
-            return $a * $b;
+            return new Fraction($a * $b);
         } elseif (is_object($a) && is_int($b)) {
             return $a->mulInt($b);
         } elseif (is_int($a) && is_object($b)) {
@@ -71,12 +71,12 @@ final class Operation {
     /**
      * @param int|Fraction|MixedFraction $a
      * @param int|Fraction|MixedFraction $b
-     * @return float|int|Fraction
+     * @return Fraction
      * @throws Exception
      */
-    public static function divide(mixed $a, mixed $b): float|Fraction|int {
+    public static function divide(mixed $a, mixed $b): Fraction {
         if (is_int($a) && is_int($b)) {
-            return $a / $b;
+            return new Fraction($a, $b);
         } elseif (is_object($a) && is_int($b)) {
             return $a->divByInt($b);
         } elseif (is_int($a) && is_object($b)) {
