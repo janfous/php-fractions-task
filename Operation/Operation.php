@@ -74,8 +74,7 @@ final class Operation {
      * @return float|int|Fraction
      * @throws Exception
      */
-    public static function divide(mixed $a, mixed $b): float|Fraction|int
-    {
+    public static function divide(mixed $a, mixed $b): float|Fraction|int {
         if (is_int($a) && is_int($b)) {
             return $a / $b;
         } elseif (is_object($a) && is_int($b)) {
